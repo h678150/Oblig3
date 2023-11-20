@@ -5,34 +5,39 @@ import no.hvl.dat100.jplab11.common.TODO;
 public class Bilde extends Tekst {
 
 	// TODO - objekt variable
+	private String url;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
+		this.setBruker(bruker);
+		this.setDato(dato);
+		this.setId(id);
+		this.setTekst(tekst);
+		this.setUrl(url);
 	}
 
 	public Bilde(int id, String bruker, String dato, int likes, String tekst, String url) {
-		throw new UnsupportedOperationException(TODO.constructor("Bilde"));
+		this.setBruker(bruker);
+		this.setDato(dato);
+		this.setId(id);
+		this.setLikes(likes);
+		this.setTekst(tekst);
+		this.setUrl(url);
 	}
 	
 	public String getUrl() {
-		throw new UnsupportedOperationException(TODO.method());
+		return url;
 
 	}
 
 	public void setUrl(String url) {
-		throw new UnsupportedOperationException(TODO.method());
+		this.url = url;
 	}
 
 	@Override
 	public String toString() {
-		throw new UnsupportedOperationException(TODO.method ());
-
-	}
-
-	// Metoden nedenfor er kun for valgfri oppgave 6
-	public String toHTML() {
 		
-		throw new UnsupportedOperationException(TODO.method());
-				
+		return "BILDE" + "\n"  + getId() + "\n" + getBruker() + "\n" + getDato() + "\n" + getLikes() + "\n" + getTekst() + "\n" + url + "\n";
+
 	}
+	
 }
